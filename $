@@ -27,7 +27,7 @@ for root, dirs, files in os.walk(absPathFolder):
                 cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             result = proc.stdout.read()
             #print(result)
-            if proc.returncode == 6:
+            if proc.returncode == 1:
                 print("Skipped document because it already contained text")
             elif proc.returncode == 0:
                 print("OCR complete")
